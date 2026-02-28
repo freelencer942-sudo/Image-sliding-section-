@@ -1,94 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
-
-.slide-container .prev,
-.slide-container .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: all 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.slide-container .prev:hover,
-.slide-container .next:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  color: white;
-}
-
-.slide-container .prev {
-  left: 2px;
-}
-
-.slide-container .next {
-  right: 2px;
-}
-
-.dots-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-.dots-container .dot {
-  cursor: pointer;
-  margin: 5px;
-  width: 20px;
-  height: 20px;
-  color: #333;
-  border-radius: 50%;
-  background-color: #dfd6ce;
-}
-
-.dots-container .dot.active {
-  border: 2px solid rgb(46, 166, 206);
-}
-
 * {
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-  height: 100%;
-  background-image: url("./resources/Background.jpg");
+.slider-container {
+    width: 100%;
+    max-width: 2880px;
+    height: 544px;
+    margin: 0 auto;
+    overflow: hidden; /* Hides the images outside the frame */
+    position: relative;
 }
 
-body h1 {
-  text-align: center;
+.slider-track {
+    display: flex;
+    width: 500%; /* 5 images * 100% */
+    height: 100%;
+    transition: transform 0.8s ease-in-out; /* Smooth transition */
 }
 
-.slide-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1000px;
-  margin: auto;
-  position: relative;
+.slide {
+    width: 100%;
+    height: 100%;
 }
 
-.slide-container .slide {
-  display: none;
-  width: 100%;
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintains aspect ratio without stretching */
 }
 
-.slide-container .slide.fade {
-  animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-
-.slide-container .slide img {
-  width: 100%;
-}
-
-h1{
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .slider-container {
+        height: 300px; /* Adjust height for mobile devices */
+    }
 }
