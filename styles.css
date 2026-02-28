@@ -4,36 +4,44 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #f4f4f9;
+    /* Center the slider vertically for demo purposes */
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
 .slider-container {
     width: 100%;
     max-width: 2880px;
-    height: 544px;
+    /* 2880 / 544 maintains your exact required proportions */
+    aspect-ratio: 2880 / 544; 
     margin: 0 auto;
-    overflow: hidden; /* Hides the images outside the frame */
+    overflow: hidden;
     position: relative;
+    background-color: #ddd; /* Fallback while images load */
 }
 
-.slider-track {
+/* * SLIDER WRAPPER 
+* Holds all slides in a row. Width is handled dynamically by JS.*/
+.slider-wrapper {
     display: flex;
-    width: 500%; /* 5 images * 100% */
     height: 100%;
-    transition: transform 0.8s ease-in-out; /* Smooth transition */
+    /* Smooth transition effect for the sliding motion */
+    transition: transform 0.8s ease-in-out; 
 }
 
+/* * INDIVIDUAL SLIDE
+* Width is handled dynamically by JS based on total slide count.
+*/
 .slide {
-    width: 100%;
     height: 100%;
+    flex-shrink: 0; 
 }
 
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintains aspect ratio without stretching */
-}
-
-/* Responsive adjustment for smaller screens */
-@media (max-width: 768px) {
-    .slider-container {
-        height: 300px; /* Adjust height for mobile devices */
-    }
+    object-fit: cover; /* Ensures images fill the space without distortion */
+    display: block;
 }
