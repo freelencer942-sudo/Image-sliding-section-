@@ -1,0 +1,109 @@
+/* ===================================root================================================ */
+/* :root{
+    --gradient-bg: linear-gradient(45deg, #7b4bc9, #ff38c3, #ff4f78, #cfa20c, #fc9723, #ff6913, #eb361e);
+    --body-color: #f2f2f2;
+    --font-color: #000000;   
+    --box-shadow:  0 2px 15px #00000080;
+    --img-shadow: #00000083;
+    --btn-hover: #0056b3;
+    --footer-color: #0e2431;
+    --filter-invert: invert(95%);
+    --section-color: #fff;
+} */
+/* ============================ image hover ====================================================== */
+@keyframes pop {
+    0%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translateX(-2.0rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+/* ================================================================================= */
+/* .p:hover{ 
+    background: black;
+    color: red;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-weight: 900;
+} */
+/* =============================== Paragraphe animation =================================================== */
+@keyframes p {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+/* ==================================== heading ========================================= */
+/* .h1{
+    color: aqua; 
+    width: 50%;
+    text-align: center;
+    font-family: unset;
+    text-transform: uppercase;
+    font-size: 81px;
+    font-weight: 900;
+    margin: auto;
+} */
+/* ============================================================================ */
+/* .h1:hover{ 
+    background: black;
+    color: red; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-weight: 900;
+} */
+/* ============================ heading animation =============================================== */
+@keyframes h1 {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+/* ========================= background-image animation============================================== */
+@keyframes animate{
+    0%{
+        background-image: url(./pic/img.jpg);
+    }
+    20%{
+        background-image: url(./pic/img2.jpg);
+    }
+    40%{
+        background-image: url(./pic/img7.jpg);
+    }
+    50%{
+        background-image: url(./pic/img11.jpg);
+    }
+    60%{
+        background-image: url(./pic/img2.jpg);
+    }
+    80%{
+        background-image: url(./pic/img7.jpg);
+    }
+    100%{
+        background-image: url(./pic/img11.jpg);
+    }
+}
+/* ================================ slider animation ============================================ */
+@keyframes slider{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-196px * 4));
+    }
+}
