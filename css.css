@@ -73,3 +73,11 @@ body{
 .slider{
     width: 70%;
 }
+@keyframes slider{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-196px * 4));
+    }
+}
